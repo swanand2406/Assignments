@@ -1,0 +1,42 @@
+.table{
+margin-left: 120px;
+font-size: 24px;
+border-radius: 2px;
+width: 1300px;
+height: 700px;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+  }
+  
+tr:hover {background-color: #ddd;}
+  .Titlehead{
+    background-color:  #04AA6D;
+  }
+  tr:nth-child(even){background-color: #f2f2f2;}
+
+.main{
+    background-color:transparent;
+}
+.Img{
+    margin-top: 90px;
+    margin-left: 640px;
+   
+}
+.empdetails{
+    margin-left: 390px;
+    background-color: lightgrey;
+    width: 700px;
+    height: 300px;
+    border: 15px solid green;
+   
+}
+.maincontainer{
+  width: 1920px;
+  background-color:darkgray;
+  padding: 15px;
+  border: 3px solid gray;
+  
+}
