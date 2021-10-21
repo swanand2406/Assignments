@@ -6,7 +6,7 @@ const Form = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
-      id: props.lists[props.lists.length - 1].id + 1,
+      id: props.lists[props.lists.length - 1],
       todo,
       completed: false,
     };
@@ -14,8 +14,13 @@ const Form = (props) => {
     props.handleChange(data);
     setTodo('');
   };
+ const handleInput = () => {
+    if(todo==""){
+      alert("empty")
+    }
+  }
   return (
-    <div className="form  py-2">
+    <div className="main">
       <form className="AddForm" onSubmit={(e) => handleSubmit(e)}>
         <div className="form-group d-flex">
           <input
@@ -26,7 +31,7 @@ const Form = (props) => {
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
           />
-          <input className="btn btn-primary" type="submit" value="Add" />
+          <button className="btn btn-primary" type="submit" onClick={handleInput}   >Add </button>
         </div>
       </form>
     </div>

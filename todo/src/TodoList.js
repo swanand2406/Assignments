@@ -24,6 +24,7 @@ const TodoList = (props) => {
           ) : (
             <React.Fragment>
               <input
+                className="chk"
                 type="checkbox"
                 onClick={() => props.handleClick(list.id)}
               />

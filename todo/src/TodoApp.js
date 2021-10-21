@@ -4,12 +4,6 @@ import TodoList from './TodoList';
 
 const TodoApp = () => {
   const [state, setState] = useState([
-    
-    
-    {
-      id: 2,
-     
-    },
   ]);
   const handleChange = (e) => {
     setState([...state, e]);

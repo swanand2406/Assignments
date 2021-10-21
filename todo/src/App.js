@@ -4,8 +4,10 @@ import TodoApp from './TodoApp';
 function App() {
   return (
     <div className="App">
-      <h1>To-Do App</h1>
+      <div className="container"><br/>
+      <h1 className="title">To-Do App</h1><br/><br/>
       <TodoApp />
+      </div>
     </div>
   );
 }
