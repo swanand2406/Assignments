@@ -8,14 +8,14 @@ const TodoApp = () => {
   const handleChange = (e) => {
     setState([...state, e]);
   };
-  const handleClick = (e) => {
+  const handleClick = (e) => {                                         //add function
     const objIndex = state.findIndex((obj) => obj.id === e);
     const newArr = [...state];
     state[objIndex].completed = true;
 
     setState(newArr);
   };
-  const handleDelete = (id) => {
+  const handleDelete = (id) => {                                      //delete function
     const newArr = [];
     state.map((todo) => {
       if (todo.id !== id) {

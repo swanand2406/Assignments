@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TodoList = (props) => {
-  const { lists } = props;
+  const { lists } = props;                           //props from TodoApp
   return (
     <div className="todoList">
       {lists.map((list) => (
