@@ -1,41 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react'
 
-const Form = (props) => {                      //props from TodoApp
- 	const [todo, setTodo] = useState('');      //maintaining state for storing list of todos
-
-	const handleSubmit = (e) => {             //submitting function
-		e.preventDefault();
-		const data = {
-			id: props.lists[props.lists.length - 1],
-			todo,
-			completed: false,
-		};
-
-		props.handleChange(data);
-		setTodo('');
-	};
-	const handleInput = () => {                //function for empty input
-		if (todo == "") {
-			alert("empty string")
-		}
-	}
+//Form props coming from App.js component
+const Form = ({ error, value, submit, onChange }) => {
 	return (
-		<div className="main">
-			<form className="AddForm" onSubmit={(e) => handleSubmit(e)}>
-				<div className="form-group d-flex">
+		<form onSubmit={submit}>
+			<div className='form-group  row align-items-center'>
+				<div className='col-9 pr-0'>
 					<input
-						type="text"
-						className="form-control mx-2"
-						name="todo"
-						placeholder="Enter todo"
-						value={todo}
-						onChange={(e) => setTodo(e.target.value)}
+						type='text'
+						className='form-control-plaintext'
+						placeholder='What to do?'
+						required
+						value={value}
+						onChange={onChange}
 					/>
-					<button className="btn btn-primary" type="submit" onClick={handleInput}   >Add </button>       	{/* Add button to add todos */}
+					{error && <small className='form-text text-danger'>{error}</small>}
 				</div>
-			</form>
-		</div>
-	);
-};
+				<div className='col-3 text-right'>
+					<button type='submit' className='btn btn-success'>
+						Add Todo
+					</button>
+				</div>
+			</div>
+		</form>
+	)
+}
 
-export default Form;
+export default Form
