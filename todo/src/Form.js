@@ -15,6 +15,7 @@ const Form = ({ error, value, submit, onChange }) => {
 						onChange={onChange}
 					/>
 					{error && <small className='form-text text-danger'>{error}</small>}
+					
 				</div>
 				<div className='col-3 text-right'>
 					<button type='submit' className='btn btn-success'>
