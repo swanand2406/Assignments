@@ -2,6 +2,7 @@ import React from 'react'
 
 //Form props coming from App.js component
 const Form = ({ error, value, submit, onChange }) => {
+	
 	return (
 		<form onSubmit={submit}>
 			<div className='form-group  row align-items-center'>
@@ -15,7 +16,7 @@ const Form = ({ error, value, submit, onChange }) => {
 						onChange={onChange}
 					/>
 					{error && <small className='form-text text-danger'>{error}</small>}
-					
+
 				</div>
 				<div className='col-3 text-right'>
 					<button type='submit' className='btn btn-success'>
